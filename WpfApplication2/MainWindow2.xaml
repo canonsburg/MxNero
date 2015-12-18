@@ -1,0 +1,67 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication2"
+        mc:Ignorable="d"
+        Title="Monero Wallet Manager" Height="650" Width="750"
+        Loaded="Form_Load"
+        Closing="DataWindow_Closing" BorderThickness="1" BorderBrush="Black">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#FFE0E0E0" HorizontalAlignment="Left" Height="199" Margin="48,25,0,0" Stroke="Black" VerticalAlignment="Top" Width="646" />
+        <Rectangle Fill="#FFE0E0E0" HorizontalAlignment="Left" Height="239" Margin="49,244,0,0" Stroke="Black" VerticalAlignment="Top" Width="646"/>
+        <Rectangle Fill="#FFE0E0E0" HorizontalAlignment="Left" Height="80" Margin="48,505,0,0" Stroke="Black" VerticalAlignment="Top" Width="347"/>
+        <Rectangle Fill="#FFE0E0E1" HorizontalAlignment="Left" Height="80" Margin="411,505,0,0" Stroke="Black" VerticalAlignment="Top" Width="184"/>
+        <Image x:Name="image" Source="Monero-Logo-Only.jpg" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="81" Margin="613,505,0,0"/>
+        <Label x:Name="LabelWalletBalance" Content="Wallet Account" HorizontalAlignment="Left" Height="25" Margin="49,25,0,0" VerticalAlignment="Top" Width="100" BorderThickness="1"/>
+        <Label x:Name="LabelSendMonero" Content="Send Monero" HorizontalAlignment="Left" Height="25" Margin="49,244,0,0" VerticalAlignment="Top" Width="100" BorderThickness="1"/>
+        <TextBox x:Name="TextAddress" HorizontalAlignment="Left" Height="25" Margin="123,55,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="561" IsReadOnly="True" FontSize="9.333"/>
+        <Label x:Name="LabelAddress" Content="Address" HorizontalAlignment="Left" Height="25" Margin="67,55,0,0" VerticalAlignment="Top" Width="56" BorderThickness="1" BorderBrush="Black"/>
+        <Label x:Name="LabelBalance" Content="Balance" HorizontalAlignment="Left" Height="25" Margin="123,94,0,0" VerticalAlignment="Top" Width="56" BorderBrush="Black" BorderThickness="1"/>
+        <TextBox x:Name="TextBalance" HorizontalAlignment="Left" Height="25" Margin="179,94,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="203" RenderTransformOrigin="0.504,0.44" IsReadOnly="True" HorizontalContentAlignment="Right"/>
+        <Label x:Name="LabelUnlockedBalance" Content="Unlocked Balance" HorizontalAlignment="Left" Height="25" Margin="73,129,0,0" VerticalAlignment="Top" Width="106" BorderBrush="Black" BorderThickness="1"/>
+        <TextBox x:Name="TextUnlockedBalance" HorizontalAlignment="Left" Height="25" Margin="179,129,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="203" IsReadOnly="True" HorizontalContentAlignment="Right"/>
+        <Label x:Name="LabelAvailableBalance" Content="Available Balance" HorizontalAlignment="Left" Height="25" Margin="73,168,0,0" VerticalAlignment="Top" Width="106" BorderBrush="Black" BorderThickness="1"/>
+        <TextBox x:Name="TextAvailableBalance" HorizontalAlignment="Left" Height="25" Margin="179,168,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="203" IsReadOnly="True" HorizontalContentAlignment="Right"/>
+        <Button x:Name="ButtonSave" Content="Save Wallet" HorizontalAlignment="Left" Margin="448,94,0,0" VerticalAlignment="Top" Width="236" Height="99" FontSize="24" BorderBrush="#FF706F6F" BorderThickness="2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFBDE9F" Offset="0"/>
+                    <GradientStop Color="#FFFD5D01" Offset="0.993"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="LabeBoarderOfLabelSendToAddress" Content="" HorizontalAlignment="Left" Height="37" Margin="67,274,0,0" VerticalAlignment="Top" Width="56" BorderThickness="1" BorderBrush="Black"/>
+        <TextBlock x:Name="LabelSendToAddress" HorizontalAlignment="Left" Height="37" Margin="73,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56"><Run Text="Send to Address"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="TextSendToAddress" HorizontalAlignment="Left" Height="37" Margin="123,274,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="561" FontSize="9.333" HorizontalContentAlignment="Left"/>
+        <Label x:Name="LabelSendAmount" Content="Amount to Send" HorizontalAlignment="Left" Height="25" Margin="67,327,0,0" VerticalAlignment="Top" Width="112" BorderBrush="Black" BorderThickness="1"/>
+        <TextBox x:Name="TextSendAmount" HorizontalAlignment="Left" Height="25" Margin="179,327,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="203" HorizontalContentAlignment="Right"/>
+        <Slider x:Name="sliderMixin" HorizontalAlignment="Left" Height="38" Margin="67,366,0,0" VerticalAlignment="Top" Width="190" Minimum="2" Maximum="20" LargeChange="5" SmallChange="1" TickFrequency="1" TickPlacement="Both" Value = "{Binding Text, ElementName=TextMixinShowOutput,  Mode=TwoWay}" IsSnapToTickEnabled="True"/>
+        <Label x:Name="LabelMixinLevel" Content="Mixin Level" HorizontalAlignment="Left" Height="25" Margin="308,357,0,0" VerticalAlignment="Top" Width="74" BorderBrush="Black" BorderThickness="1"/>
+        <Label x:Name="LabelPaymentID" Content="Payment ID (Optional)" HorizontalAlignment="Left" Height="30" Margin="67,404,0,0" VerticalAlignment="Top" Width="131" BorderThickness="1" BorderBrush="Black"/>
+        <TextBox x:Name="TextPaymentID" HorizontalAlignment="Left" Height="30" Margin="67,434,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="617" FontSize="9.333"/>
+        <Button x:Name="ButtonSendMoney" Content="Send Monero" HorizontalAlignment="Left" Height="89" Margin="448,327,0,0" VerticalAlignment="Top" Width="236" FontSize="24" BorderThickness="2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFBDE9F" Offset="0"/>
+                    <GradientStop Color="#FFFD5D01" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="LabelDaemonAddress" Content="Daemon Address" HorizontalAlignment="Left" Height="30" Margin="66,515,0,0" VerticalAlignment="Top" Width="112" BorderThickness="1" BorderBrush="Black"/>
+        <TextBox x:Name="TextDaemonAddress" HorizontalAlignment="Left" Height="30" Margin="178,515,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="199" IsReadOnlyCaretVisible="True" Background="#FFE0E0E0"/>
+        <Label x:Name="LabelDefaultDaemonAddress" Content="Default Remote Daemon Address" HorizontalAlignment="Left" Height="26" Margin="66,550,0,0" VerticalAlignment="Top" Width="311" BorderThickness="1" BorderBrush="Black"/>
+        <Label x:Name="LabelMvNeroVersion" Content="MxNero Version 1.0.0" HorizontalAlignment="Left" Height="30" Margin="425,513,0,0" VerticalAlignment="Top" Width="158" BorderThickness="1" BorderBrush="Black"/>
+        <Label x:Name="LabelLightweightWallet" Content="Lightweight Monero Wallet" HorizontalAlignment="Left" Height="31" Margin="425,548,0,0" VerticalAlignment="Top" Width="158" BorderBrush="Black" BorderThickness="1"/>
+        <Label x:Name="LabelXMRSendTo" Content="XMR" HorizontalAlignment="Left" Height="25" Margin="382,327,0,0" VerticalAlignment="Top" Width="36"/>
+        <Label x:Name="LabelXMRAvailBal" Content="XMR" HorizontalAlignment="Left" Height="25" Margin="382,168,0,0" VerticalAlignment="Top" Width="36"/>
+        <Label x:Name="LabelXMRUnlockBal" Content="XMR" HorizontalAlignment="Left" Height="25" Margin="382,129,0,0" VerticalAlignment="Top" Width="36"/>
+        <Label x:Name="LabelXMRBalance" Content="XMR" HorizontalAlignment="Left" Height="25" Margin="382,94,0,0" VerticalAlignment="Top" Width="36"/>
+        <TextBox x:Name="TextMixinShowOutput" HorizontalAlignment="Left" Height="25" Margin="279,357,0,0" TextWrapping="Wrap" Text="{Binding Value, ElementName=sliderMixin, Mode=TwoWay}" VerticalAlignment="Top" Width="29" IsReadOnly="True"/>
+
+    </Grid>
+</Window>
