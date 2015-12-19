@@ -88,7 +88,6 @@ Public Class Window1
         GetFileName = DirFileNameFull
     End Function
 
-
     Private Sub RunSimplewallet(ByVal SimpleWalletPath As String, ByVal WalletName As String, ByVal Password As String)
         Dim objShell As Object
         objShell = CreateObject("WScript.Shell")
@@ -213,5 +212,24 @@ ErrorHandler:
 
     Private Sub HandleUnchecked(ByVal sender As Object, ByVal e As RoutedEventArgs)
         IsCheckedSimpleWallet = False
+    End Sub
+
+    Private Sub ButtonNewWallet_Click(sender As Object, e As RoutedEventArgs) Handles ButtonNewWallet.Click
+        Dim CreateNewWallet As New Window3
+        AddHandler CreateNewWallet.Closing, AddressOf CreateNewWallet_WindowClosed
+        CreateNewWallet.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub CreateNewWallet_WindowClosed()
+
+        If IsProcessRunning("simplewallet.exe") Then    'check if simplewallet.exe is running
+            Dim WalletGUI As New Window2
+            WalletGUI.Show()
+            Me.Close()
+        Else
+            MessageBox.Show("Error! Fail to Create New Wallet")
+            Me.Show()
+        End If
     End Sub
 End Class

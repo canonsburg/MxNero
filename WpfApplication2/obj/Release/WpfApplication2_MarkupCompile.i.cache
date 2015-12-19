@@ -4,7 +4,7 @@
 winexe
 VB
 .vb
-C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\
+C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Release\
 WpfApplication2
 none
 false
@@ -16,5 +16,5 @@ false
 11-1759381096
 Window1.xaml;Window2.xaml;Window3.xaml;
 
-False
+True
 

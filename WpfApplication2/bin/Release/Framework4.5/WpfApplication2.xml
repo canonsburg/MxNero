@@ -74,5 +74,15 @@ Window2
 InitializeComponent
 </summary>
 </member>
+<member name="T:WpfApplication2.Window3">
+<summary>
+Window3
+</summary>
+</member>
+<member name="M:WpfApplication2.Window3.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
 </members>
 </doc>

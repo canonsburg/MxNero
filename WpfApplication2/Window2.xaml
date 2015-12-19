@@ -16,7 +16,7 @@
         <Rectangle Fill="#FFE0E0E0" HorizontalAlignment="Left" Height="239" Margin="49,244,0,0" Stroke="Black" VerticalAlignment="Top" Width="646"/>
         <Rectangle Fill="#FFE0E0E0" HorizontalAlignment="Left" Height="80" Margin="48,505,0,0" Stroke="Black" VerticalAlignment="Top" Width="347"/>
         <Rectangle Fill="#FFE0E0E1" HorizontalAlignment="Left" Height="80" Margin="411,505,0,0" Stroke="Black" VerticalAlignment="Top" Width="184"/>
-        <Image x:Name="image" Source ="C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\Monero-Logo-Only.jpg" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="81" Margin="613,505,0,0"/>
+        <Image x:Name="image" Source="C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\Monero-Logo-Only.jpg" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="81" Margin="613,505,0,0"/>
         <Label x:Name="LabelWalletBalance" Content="Wallet Account" HorizontalAlignment="Left" Height="25" Margin="49,25,0,0" VerticalAlignment="Top" Width="100" BorderThickness="1"/>
         <Label x:Name="LabelSendMonero" Content="Send Monero" HorizontalAlignment="Left" Height="25" Margin="49,244,0,0" VerticalAlignment="Top" Width="100" BorderThickness="1"/>
         <TextBox x:Name="TextAddress" HorizontalAlignment="Left" Height="25" Margin="123,55,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="561" IsReadOnly="True" FontSize="9.333"/>
