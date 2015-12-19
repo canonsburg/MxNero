@@ -36,7 +36,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <IncrementalBuild>true</IncrementalBuild>
-    <OutputPath>bin\Release\Framework4.5\</OutputPath>
+    <OutputPath>..\..\..\..\GitHub\MxNero\WpfApplication2\bin\Release\frameworknew\</OutputPath>
     <DocumentationFile>WpfApplication2.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
     <Prefer32Bit>false</Prefer32Bit>

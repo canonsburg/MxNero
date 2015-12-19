@@ -47,7 +47,7 @@ Public Class Window1
         Else
             WalletKeysPath = ""
             TextWalletPath.Text = "Please Select Wallet File"
-            MessageBox.Show("You Clicked Cancel")
+            'MessageBox.Show("You Clicked Cancel")
         End If
 
     End Sub
@@ -228,7 +228,7 @@ ErrorHandler:
             WalletGUI.Show()
             Me.Close()
         Else
-            MessageBox.Show("Error! Fail to Create New Wallet")
+            MessageBox.Show("Choose to Not Create New Wallet")
             Me.Show()
         End If
     End Sub

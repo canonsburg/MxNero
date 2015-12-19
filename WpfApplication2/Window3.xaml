@@ -10,11 +10,12 @@
         <Label x:Name="LabelCreateWalletMainDisplay" Content="1. Select Location of Simplewallet.exe&#xD;&#xA;2. Enter Wallet Name and Password" HorizontalAlignment="Center" Height="60" Margin="169,62,169,495" VerticalAlignment="Center" Width="404" BorderBrush="Black" BorderThickness="1" HorizontalContentAlignment="Center" FontSize="18.667" FontFamily="Elephant"/>
         <TextBox x:Name="TextBoxCreateWalletName" HorizontalAlignment="Left" Height="60" Margin="169,183,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="404"/>
         <Label x:Name="label1" Content="Wallet Name" HorizontalAlignment="Left" Margin="169,157,0,0" VerticalAlignment="Top" Width="79" BorderBrush="Black" BorderThickness="1" Height="27"/>
-        <TextBox x:Name="TextBoxCreateWalletPassword" HorizontalAlignment="Left" Height="60" Margin="169,300,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="404"/>
         <Label x:Name="LabelCreateWalletPassword" Content="Password" HorizontalAlignment="Left" Margin="169,273,0,0" VerticalAlignment="Top" Width="79" Height="27" BorderBrush="Black" BorderThickness="1"/>
         <TextBlock x:Name="LabelUserWelcome" Margin="20,20,0,0" TextWrapping="Wrap" RenderTransformOrigin="0.512,0.845" FontSize="14.667" FontFamily="Modern No. 20" HorizontalAlignment="Left" FontWeight="Bold" Foreground="#FF574040" Text="MxNero Wallet V.1.0.1" Width="149" VerticalAlignment="Top" Height="23"/>
         <Button x:Name="ButtonFolderSelection" Content="Select Location" HorizontalAlignment="Left" Margin="597,20,0,0" VerticalAlignment="Top" Width="120" Height="40"/>
         <Button x:Name="ButtonCreateWallet" Content="Create New Wallet" HorizontalAlignment="Center" Margin="246,398,246,171" VerticalAlignment="Center" Width="250" Height="50"/>
         <Image x:Name="image" Source="C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\Monero-Logo.jpg" HorizontalAlignment="Center" Height="75" Margin="224,505,226,39" VerticalAlignment="Center" Width="292"/>
+        <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Left" Margin="169,300,0,0" VerticalAlignment="Top" Width="404" Height="60"/>
+        <CheckBox x:Name="CheckBoxShowSimplewallet" Content="Show Simplewallet?" HorizontalAlignment="Left" Margin="20,43,0,0" VerticalAlignment="Top" Height="20" Width="134" IsThreeState="False" Checked="HandleCheck" Unchecked="HandleUnchecked"/>
     </Grid>
 </Window>

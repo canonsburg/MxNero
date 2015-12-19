@@ -1,11 +1,15 @@
-C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Release\Framework4.5\WpfApplication2.exe.config
-C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Release\Framework4.5\WpfApplication2.exe
-C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Release\Framework4.5\WpfApplication2.pdb
-C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Release\Framework4.5\WpfApplication2.xml
 C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Debug\WpfApplication2.exe.config
 C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Debug\WpfApplication2.exe
 C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Debug\WpfApplication2.pdb
 C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Debug\WpfApplication2.xml
+C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Release\WpfApplication2.exe.config
+C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Release\WpfApplication2.exe
+C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Release\WpfApplication2.pdb
+C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Release\WpfApplication2.xml
+C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Release\Framework4.5\WpfApplication2.exe.config
+C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Release\Framework4.5\WpfApplication2.exe
+C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Release\Framework4.5\WpfApplication2.pdb
+C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Release\Framework4.5\WpfApplication2.xml
 C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\Window1.g.vb
 C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\Window2.g.vb
 C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\Window3.g.vb
@@ -20,3 +24,7 @@ C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplicati
 C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.exe
 C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.xml
 C:\Users\Eddy\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.pdb
+C:\Users\Eddy\Documents\GitHub\MxNero\WpfApplication2\bin\Release\frameworknew\WpfApplication2.exe.config
+C:\Users\Eddy\Documents\GitHub\MxNero\WpfApplication2\bin\Release\frameworknew\WpfApplication2.exe
+C:\Users\Eddy\Documents\GitHub\MxNero\WpfApplication2\bin\Release\frameworknew\WpfApplication2.pdb
+C:\Users\Eddy\Documents\GitHub\MxNero\WpfApplication2\bin\Release\frameworknew\WpfApplication2.xml

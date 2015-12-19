@@ -5,6 +5,8 @@ Imports System.Diagnostics
 Public Class Window3
     Dim simplewalletpath As String
     Dim walletpath As String
+    Public IsCheckedSimpleWallet As Boolean
+
     Public Sub New()
 
         ' This call is required by the designer.
@@ -13,13 +15,15 @@ Public Class Window3
         ' Add any initialization after the InitializeComponent() call.
         'Clear all Textboxes
         TextBoxCreateWalletName.Text = ""
-        TextBoxCreateWalletPassword.Text = ""
+        PasswordBox.Password = ""
+        IsCheckedSimpleWallet = False
+
     End Sub
 
     Private Sub ButtonFolderSelection_Click(sender As Object, e As RoutedEventArgs) Handles ButtonFolderSelection.Click
         'Clear all Textboxes
         TextBoxCreateWalletName.Text = ""
-        TextBoxCreateWalletPassword.Text = ""
+        PasswordBox.Password = ""
 
         ' Configure open file dialog box
         Dim fDialog As New Microsoft.Win32.OpenFileDialog()
@@ -46,7 +50,7 @@ Public Class Window3
 
         Else
             simplewalletpath = ""
-            MessageBox.Show("You Clicked Cancel")
+            'MessageBox.Show("You Clicked Cancel")
         End If
 
         If (simplewalletpath IsNot Nothing) And simplewalletpath <> "" Then
@@ -59,7 +63,8 @@ Public Class Window3
 
     Private Sub ButtonCreateWallet_Click(sender As Object, e As RoutedEventArgs) Handles ButtonCreateWallet.Click
         Dim NewWalletName As String = TextBoxCreateWalletName.Text
-        Dim NewWalletPassword As String = TextBoxCreateWalletPassword.Text
+        Dim NewWalletPassword As String = PasswordBox.Password
+        PasswordBox.Password = "" 'Clear PasswordBox
 
         If (simplewalletpath Is Nothing) Or simplewalletpath = "" Then
             MessageBox.Show("Error! Please Select File Path to simplewallet.exe")
@@ -89,13 +94,14 @@ Public Class Window3
             If File.Exists(walletpath & NewWalletName & ".keys") Then
                 TerminateApp() 'kill simplewallet.exe
                 Call RPCModeRunSimplewallet(simplewalletpath, NewWalletName, NewWalletPassword) 'Launch simplewallet executable; in RPC mode
+                NewWalletPassword = ""  'clear password variable
                 Me.Hide()
                 Me.Close()
             Else
                 TerminateApp() 'kill simplewallet.exe
+                NewWalletPassword = ""  'clear password variable
                 Me.Close()
             End If
-
 
         Else
             MessageBox.Show("Error! Cannot Find simplewallet.exe, Please Select It Again")
@@ -134,8 +140,11 @@ ErrorHandler:
         CommandStr = SimpleWalletPath & " --daemon-address node.moneroclub.com:8880 --rpc-bind-port 8082 --wallet-file=" & WalletName & " --password=" & Password
         On Error GoTo ErrorHandler
         objShell.CurrentDirectory = GetPathName(SimpleWalletPath) 'Set current directory of Shell
-        objShell.Run(CommandStr, 1)
-
+        If IsCheckedSimpleWallet Then
+            objShell.Run(CommandStr, 1)
+        Else
+            objShell.Run(CommandStr, 0)
+        End If
         Exit Sub
 
 ErrorHandler:
@@ -202,5 +211,13 @@ ErrorHandler:
         objList = Nothing
         objProcess = Nothing
 
+    End Sub
+
+    Private Sub HandleCheck(ByVal sender As Object, ByVal e As RoutedEventArgs)
+        IsCheckedSimpleWallet = True
+    End Sub
+
+    Private Sub HandleUnchecked(ByVal sender As Object, ByVal e As RoutedEventArgs)
+        IsCheckedSimpleWallet = False
     End Sub
 End Class
